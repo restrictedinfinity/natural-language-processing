@@ -52,7 +52,7 @@ def download_week1_resources(force=False):
             "test.tsv",
             "text_prepare_tests.tsv",
         ],
-        "data",
+        "data/week1",
         force=force
     )
 
@@ -65,7 +65,7 @@ def download_week2_resources(force=False):
             "validation.txt",
             "test.txt",
         ],
-        "data",
+        "data/week2",
         force=force
     )
 
@@ -79,12 +79,12 @@ def download_week3_resources(force=False):
             "test.tsv",
             "test_embeddings.tsv",
         ],
-        "data",
+        "data/week3",
         force=force
     )
     print("Downloading GoogleNews-vectors-negative300.bin.gz (1.5G) for you, it will take a while...")
     download_file("https://s3.amazonaws.com/dl4j-distribution/GoogleNews-vectors-negative300.bin.gz",
-                  "GoogleNews-vectors-negative300.bin.gz")
+                  "GoogleNews-vectors-negative300.bin.gz", "data")
 
 
 def download_project_resources(force=False):
@@ -94,6 +94,13 @@ def download_project_resources(force=False):
             "dialogues.tsv",
             "tagged_posts.tsv",
         ],
-        "data",
+        "data/project",
         force=force
     )
+
+if __name__ == '__main__':
+    print("Directory" + os.getcwd())
+    download_week1_resources()
+    download_week2_resources()
+    download_week3_resources()
+    download_project_resources()

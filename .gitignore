@@ -6,6 +6,12 @@ __pycache__/
 # C extensions
 *.so
 
+#Python Environment
+env3/*
+
+#Data
+data/*
+
 # Distribution / packaging
 .Python
 env/
@@ -104,3 +110,4 @@ ENV/
 data/
 
 .idea
+.DS_Store
