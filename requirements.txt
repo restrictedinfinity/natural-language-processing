@@ -10,3 +10,5 @@ matplotlib
 sympy
 nltk
 requests
+ipython
+prompt-toolkit
